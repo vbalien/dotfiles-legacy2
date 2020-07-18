@@ -35,7 +35,7 @@ kill_program gsd-xsettings
 gnome-keyring-daemon --start --components=pkcs11 &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/gsd-xsettings &
-nitrogen --restore
+feh --bg-scale ${HOME}/.config/wallpaper.png
 xsetroot -cursor_name left_ptr
 picom --experimental-backends &
 polybar mybar &
@@ -45,5 +45,6 @@ sxhkd &
 dex -a
 libinput-gestures-setup restart
 
+xinput set-prop "bcm5974" "libinput Natural Scrolling Enabled" 1
 xinput set-prop 'Logitech G102 LIGHTSYNC Gaming Mouse' 'libinput Natural Scrolling Enabled' 1
 xinput set-prop 'Logitech G102 LIGHTSYNC Gaming Mouse' 'libinput Accel Speed' -0.5
