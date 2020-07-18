@@ -78,5 +78,5 @@
   "editor.formatOnSave": true,
   "vim.enableNeovim": true,
   "vim.useCtrlKeys": false,
-  "editor.fontSize": 16
+  "editor.fontSize": 14
 }

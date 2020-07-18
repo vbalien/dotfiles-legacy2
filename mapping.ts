@@ -1,7 +1,13 @@
 import { dot, DotOption } from "./scripts/dot.ts";
 
+const common: DotOption = {
+  link: {
+    gitconfig: ".gitconfig",
+  },
+};
+
 const linux: DotOption = {
-  hostname: ["MBP", "office2"],
+  hostname: ["office2"],
   install: [
     "sudo pacman -S git",
     `bash -c "cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay"`,
@@ -16,28 +22,43 @@ const linux: DotOption = {
             fcitx5 fcitx5-qt fcitx5-gtk fcitx5-hangul fcitx5-anthy
             kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git`,
   ],
-  link: [
-    ["linux/alacritty", ".config/alacritty"],
-    ["linux/bin/ufetch", ".local/bin/ufetch"],
-    ["linux/bspwm", ".config/bspwm"],
-    ["linux/Code/User/settings.json", ".config/Code/User/settings.json"],
-    ["linux/dunst", ".config/dunst"],
-    ["linux/omz", ".config/omz"],
-    ["linux/picom", ".config/picom"],
-    ["linux/polybar", ".config/polybar"],
-    ["linux/rofi", ".config/rofi"],
-    ["linux/sxhkd", ".config/sxhkd"],
-    ["linux/fcitx5", ".config/fcitx5"],
-    ["linux/dconf", ".config/dconf"],
-    ["linux/bakamplayer.ini", ".config/bakamplayer.ini"],
-    ["linux/xinitrc", ".xinitrc"],
-    ["linux/pam_environment", ".pam_environment"],
-    ["linux/zshrc", ".zshrc"],
-  ],
+  link: {
+    ...common.link,
+    "linux/alacritty": ".config/alacritty",
+    "linux/bin/ufetch": ".local/bin/ufetch",
+    "linux/bspwm": ".config/bspwm",
+    "linux/Code/User/settings.json": ".config/Code/User/settings.json",
+    "linux/dunst": ".config/dunst",
+    "linux/omz": ".config/omz",
+    "linux/picom": ".config/picom",
+    "linux/polybar": ".config/polybar",
+    "linux/rofi": ".config/rofi",
+    "linux/sxhkd": ".config/sxhkd",
+    "linux/fcitx5": ".config/fcitx5",
+    "linux/dconf": ".config/dconf",
+    "linux/bakamplayer.ini": ".config/bakamplayer.ini",
+    "linux/xinitrc": ".xinitrc",
+    "linux/pam_environment": ".pam_environment",
+    "linux/zshrc": ".zshrc",
+  },
+};
+
+const linuxMacbook: DotOption = {
+  ...linux,
+  hostname: "MBP",
+  link: {
+    ...linux.link,
+    "linux-macbook/dconf": ".config/dconf",
+    "linux-macbook/polybar": ".config/polybar",
+    "linux-macbook/rofi": ".config/rofi",
+    "linux-macbook/sxhkd": ".config/sxhkd",
+    "linux-macbook/pam_environment": ".pam_environment",
+    "linux-macbook/Xresources": ".Xresources",
+  },
 };
 
 try {
-  await dot(Deno.args, [linux]);
+  await dot(Deno.args, [linux, linuxMacbook]);
 } catch (err) {
   console.log(err.message);
 }

@@ -9,7 +9,7 @@ import {
 export interface DotOption {
   hostname?: string | string[];
   install?: string[];
-  link?: [string, string][];
+  link?: Record<string, string>;
 }
 
 export async function dot(args: string[], options: DotOption[]) {
@@ -30,17 +30,20 @@ export async function dot(args: string[], options: DotOption[]) {
       }
     }
   } else if (flags._[0] === "link" && target.link) {
-    for (const link of target.link) {
+    for (const from in target.link) {
       try {
-        const path = `${Deno.env.get("HOME")}/${link[1]}`;
+        const path = `${Deno.env.get("HOME")}/${target.link[from]}`;
         if (existsSync(path)) {
-          console.log(`${path} does exist. move to ${path}.bak`);
-          moveSync(path, `${path}.bak`);
+          let i = 0;
+          let mvPath = `${path}.bak`;
+          while (existsSync(mvPath)) mvPath = `${path}.${++i}.bak`;
+          console.log(`${path} does exist. move to ${mvPath}`);
+          moveSync(path, mvPath);
         }
-        await ensureSymlink(Deno.realPathSync(link[0]), path);
+        await ensureSymlink(Deno.realPathSync(from), path);
         console.log(`Link: ${path}`);
       } catch (err) {
-        throw Error(`${err.message}\nerror link: ${JSON.stringify(link)}`);
+        throw Error(`${err.message}\nerror link: ${JSON.stringify(from)}`);
       }
     }
   }

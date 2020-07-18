@@ -43,6 +43,7 @@ fcitx5 &
 dunst &
 sxhkd &
 dex -a
+libinput-gestures-setup restart
 
 xinput set-prop 'Logitech G102 LIGHTSYNC Gaming Mouse' 'libinput Natural Scrolling Enabled' 1
 xinput set-prop 'Logitech G102 LIGHTSYNC Gaming Mouse' 'libinput Accel Speed' -0.5
