@@ -40,6 +40,7 @@ const linux: DotOption = {
     "linux/xinitrc": ".xinitrc",
     "linux/pam_environment": ".pam_environment",
     "linux/zshrc": ".zshrc",
+    "linux/Xmodmap": ".Xmodmap",
   },
 };
 
