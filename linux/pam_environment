@@ -1,0 +1,11 @@
+GTK_IM_MODULE DEFAULT=fcitx
+QT_IM_MODULE  DEFAULT=fcitx
+XMODIFIERS    DEFAULT=@im=fcitx
+
+GTK_THEME     DEFAULT=Numix:dark
+GTK2_RC_FILES DEFAULT=/usr/share/themes/Numix/gtk-2.0/gtkrc
+
+BROWSER       DEFAULT=google-chrome-stable
+
+QT_STYLE_OVERRIDE    DEFAULT=GTK+
+QT_QPA_PLATFORMTHEME DEFAULT=gtk2
