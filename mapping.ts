@@ -4,15 +4,15 @@ const linux: DotOption = {
   hostname: ["MBP", "office2"],
   install: [
     "sudo pacman -S git",
-    `bash -c "cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && rm -rf ."`,
+    `bash -c "cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay"`,
     "yay -Syu",
     `yay -S --needed
             sxhkd bspwm rofi dunst-git visual-studio-code-bin
             ttf-nanum polybar-git baka-mplayer-git
             picom-ibhagwan-git alacritty zsh maim
             xclip xdotool google-chrome pulseaudio
-            gnome-keyring pasystray polkit-gnome
-            gnome-settings-daemon nitrogen
+            gnome-keyring pasystray polkit-gnome nerd-fonts-terminus
+            gnome-settings-daemon nitrogen dex sassc
             fcitx5 fcitx5-qt fcitx5-gtk fcitx5-hangul fcitx5-anthy
             kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git`,
   ],
