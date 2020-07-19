@@ -62,6 +62,9 @@ modules-right = pulseaudio wlan eth date
 
 tray-position = right
 tray-padding = 2
+tray-scale = 1.0
+tray-maxsize = 32
+
 ;tray-detached = true
 ;tray-offset-x = -10
 ;tray-background = #0063ff

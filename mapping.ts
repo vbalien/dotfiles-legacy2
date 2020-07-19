@@ -15,7 +15,7 @@ const linux: DotOption = {
     `yay -S --needed
             sxhkd bspwm rofi dunst-git visual-studio-code-bin
             ttf-nanum polybar-git baka-mplayer-git
-            picom-ibhagwan-git alacritty zsh maim
+            picom-ibhagwan-git alacritty zsh maim gtk-engine-murrine
             xclip xdotool google-chrome pulseaudio
             gnome-keyring pasystray polkit-gnome nerd-fonts-terminus
             gnome-settings-daemon nitrogen dex sassc
@@ -36,7 +36,6 @@ const linux: DotOption = {
     ".config/sxhkd": "linux/sxhkd",
     ".config/fcitx5": "linux/fcitx5",
     ".config/dconf": "linux/dconf",
-    ".config/bakamplayer.ini": "linux/bakamplayer.ini",
     ".xinitrc": "linux/xinitrc",
     ".pam_environment": "linux/pam_environment",
     ".zshrc": "linux/zshrc",
@@ -44,22 +43,24 @@ const linux: DotOption = {
   },
 };
 
-const linuxMacbook: DotOption = {
+const linuxHiDPI: DotOption = {
   ...linux,
   hostname: "MBP",
   link: {
     ...linux.link,
-    ".config/dconf": "linux-macbook/dconf",
-    ".config/polybar": "linux-macbook/polybar",
-    ".config/rofi": "linux-macbook/rofi",
-    ".config/sxhkd": "linux-macbook/sxhkd",
-    ".pam_environment": "linux-macbook/pam_environment",
-    ".Xresources": "linux-macbook/Xresources",
+    ".config/bspwm": "linux-hidpi/bspwm",
+    ".config/dconf": "linux-hidpi/dconf",
+    ".config/polybar": "linux-hidpi/polybar",
+    ".config/rofi": "linux-hidpi/rofi",
+    ".config/sxhkd": "linux-hidpi/sxhkd",
+    ".config/dunst": "linux-hidpi/dunst",
+    ".pam_environment": "linux-hidpi/pam_environment",
+    ".Xresources": "linux-hidpi/Xresources",
   },
 };
 
 try {
-  await dot(Deno.args, [linux, linuxMacbook]);
+  await dot(Deno.args, [linux, linuxHiDPI]);
 } catch (err) {
   console.log(err.message);
 }
