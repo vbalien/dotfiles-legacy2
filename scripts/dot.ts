@@ -30,20 +30,36 @@ export async function dot(args: string[], options: DotOption[]) {
       }
     }
   } else if (flags._[0] === "link" && target.link) {
-    for (const from in target.link) {
+    for (const value in target.link) {
+      const from = target.link[value];
+      const to = `${Deno.env.get("HOME")}/${value}`;
       try {
-        const path = `${Deno.env.get("HOME")}/${target.link[from]}`;
-        if (existsSync(path)) {
+        if (existsSync(to)) {
+          if (Deno.readLinkSync(to) === Deno.realPathSync(from)) continue;
           let i = 0;
-          let mvPath = `${path}.bak`;
-          while (existsSync(mvPath)) mvPath = `${path}.${++i}.bak`;
-          console.log(`${path} does exist. move to ${mvPath}`);
-          moveSync(path, mvPath);
+          let mvPath = `${to}.bak`;
+          while (existsSync(mvPath)) mvPath = `${to}.${++i}.bak`;
+          console.log(`${to} does exist. move to ${mvPath}`);
+          moveSync(to, mvPath);
         }
-        await ensureSymlink(Deno.realPathSync(from), path);
-        console.log(`Link: ${path}`);
+        await ensureSymlink(Deno.realPathSync(from), to);
+        console.log(`Link: ${to}`);
       } catch (err) {
-        throw Error(`${err.message}\nerror link: ${JSON.stringify(from)}`);
+        throw Error(`${err.message}\nerror link: ${to}`);
+      }
+    }
+  } else if (flags._[0] === "unlink" && target.link) {
+    for (const value in target.link) {
+      const from = target.link[value];
+      const to = `${Deno.env.get("HOME")}/${value}`;
+      try {
+        if (existsSync(to)) {
+          if (Deno.readLinkSync(to) !== Deno.realPathSync(from)) continue;
+          Deno.removeSync(to);
+          console.log(`Unlink: ${to}`);
+        }
+      } catch (err) {
+        throw Error(`${err.message}\nerror link: ${to}`);
       }
     }
   }

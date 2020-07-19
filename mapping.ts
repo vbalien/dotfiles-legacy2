@@ -2,7 +2,7 @@ import { dot, DotOption } from "./scripts/dot.ts";
 
 const common: DotOption = {
   link: {
-    gitconfig: ".gitconfig",
+    ".gitconfig": "gitconfig",
   },
 };
 
@@ -24,23 +24,23 @@ const linux: DotOption = {
   ],
   link: {
     ...common.link,
-    "linux/alacritty": ".config/alacritty",
-    "linux/bin/ufetch": ".local/bin/ufetch",
-    "linux/bspwm": ".config/bspwm",
-    "linux/Code/User/settings.json": ".config/Code/User/settings.json",
-    "linux/dunst": ".config/dunst",
-    "linux/omz": ".config/omz",
-    "linux/picom": ".config/picom",
-    "linux/polybar": ".config/polybar",
-    "linux/rofi": ".config/rofi",
-    "linux/sxhkd": ".config/sxhkd",
-    "linux/fcitx5": ".config/fcitx5",
-    "linux/dconf": ".config/dconf",
-    "linux/bakamplayer.ini": ".config/bakamplayer.ini",
-    "linux/xinitrc": ".xinitrc",
-    "linux/pam_environment": ".pam_environment",
-    "linux/zshrc": ".zshrc",
-    "linux/Xmodmap": ".Xmodmap",
+    ".config/alacritty": "linux/alacritty",
+    ".local/bin/ufetch": "linux/bin/ufetch",
+    ".config/bspwm": "linux/bspwm",
+    ".config/Code/User/settings.json": "linux/Code/User/settings.json",
+    ".config/dunst": "linux/dunst",
+    ".config/omz": "linux/omz",
+    ".config/picom": "linux/picom",
+    ".config/polybar": "linux/polybar",
+    ".config/rofi": "linux/rofi",
+    ".config/sxhkd": "linux/sxhkd",
+    ".config/fcitx5": "linux/fcitx5",
+    ".config/dconf": "linux/dconf",
+    ".config/bakamplayer.ini": "linux/bakamplayer.ini",
+    ".xinitrc": "linux/xinitrc",
+    ".pam_environment": "linux/pam_environment",
+    ".zshrc": "linux/zshrc",
+    ".Xmodmap": "linux/Xmodmap",
   },
 };
 
@@ -49,12 +49,12 @@ const linuxMacbook: DotOption = {
   hostname: "MBP",
   link: {
     ...linux.link,
-    "linux-macbook/dconf": ".config/dconf",
-    "linux-macbook/polybar": ".config/polybar",
-    "linux-macbook/rofi": ".config/rofi",
-    "linux-macbook/sxhkd": ".config/sxhkd",
-    "linux-macbook/pam_environment": ".pam_environment",
-    "linux-macbook/Xresources": ".Xresources",
+    ".config/dconf": "linux-macbook/dconf",
+    ".config/polybar": "linux-macbook/polybar",
+    ".config/rofi": "linux-macbook/rofi",
+    ".config/sxhkd": "linux-macbook/sxhkd",
+    ".pam_environment": "linux-macbook/pam_environment",
+    ".Xresources": "linux-macbook/Xresources",
   },
 };
 
