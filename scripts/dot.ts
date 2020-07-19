@@ -50,11 +50,9 @@ export async function dot(args: string[], options: DotOption[]) {
     }
   } else if (flags._[0] === "unlink" && target.link) {
     for (const value in target.link) {
-      const from = target.link[value];
       const to = `${Deno.env.get("HOME")}/${value}`;
       try {
         if (existsSync(to)) {
-          if (Deno.readLinkSync(to) !== Deno.realPathSync(from)) continue;
           Deno.removeSync(to);
           console.log(`Unlink: ${to}`);
         }

@@ -130,7 +130,7 @@ super + {Left,Down,Up,Right}
 super + p
 	bspc node -g sticky; \
 	bspc node --state \~floating; \
-	xdotool getactivewindow windowsize 640 360 windowmove $(expr 1920 - 640 - 45) $(expr 1080 - 360 - 30)
+	xdotool getactivewindow windowsize 1024 576 windowmove $(expr 2880 - 1024 - 90) $(expr 1800 - 576 - 60)
 
 
 XF86AudioMute
@@ -147,3 +147,9 @@ XF86MonBrightnessUp
 
 XF86MonBrightnessDown
  xbacklight -ctrl gmux_backlight -dec 5
+
+XF86KbdBrightnessUp
+ xbacklight -ctrl smc::kbd_backlight -inc 10
+
+XF86KbdBrightnessDown
+ xbacklight -ctrl smc::kbd_backlight -dec 10
