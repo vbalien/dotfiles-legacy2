@@ -36,7 +36,7 @@ const linux: DotOption = {
     ".config/sxhkd": "linux/sxhkd",
     ".config/fcitx5": "linux/fcitx5",
     ".config/dconf": "linux/dconf",
-    ".config/wallpaper.png": "wallpaper.png",
+    ".config/wallpaper": "wallpaper",
     ".xinitrc": "linux/xinitrc",
     ".pam_environment": "linux/pam_environment",
     ".zshrc": "linux/zshrc",

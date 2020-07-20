@@ -2,4 +2,7 @@
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
+feh --bg-fill --randomize ${HOME}/.config/wallpaper/*
+systemd-run --on-calendar="*:0/5" --user --setenv=DISPLAY=:0 -- /bin/feh --bg-fill --randomize ~/.config/wallpaper/*
+
 exec bspwm

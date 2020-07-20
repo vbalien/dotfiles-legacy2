@@ -77,6 +77,8 @@
   },
   "editor.formatOnSave": true,
   "vim.enableNeovim": true,
-  "vim.useCtrlKeys": false,
+  "vim.handleKeys": {
+    "<C-w>": false
+  },
   "editor.fontSize": 14
 }
