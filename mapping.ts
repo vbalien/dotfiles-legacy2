@@ -9,8 +9,6 @@ const common: DotOption = {
 const linux: DotOption = {
   hostname: ["office2"],
   install: [
-    "sudo pacman -S git",
-    `sh -c "cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay"`,
     `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`,
     "yay -Syu",
     `yay -S --needed
@@ -20,7 +18,9 @@ const linux: DotOption = {
             gnome-keyring pasystray polkit-gnome nerd-fonts-terminus
             gnome-settings-daemon nitrogen dex sassc ttf-nanum
             fcitx5 fcitx5-qt fcitx5-gtk fcitx5-hangul fcitx5-anthy
-            kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git`,
+            kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git
+            telegram-desktop nautilus eog smplayer smplayer-skin transgui-qt
+            qt5-styleplugins xdg-user-dirs slim`,
   ],
   link: {
     ...common.link,
