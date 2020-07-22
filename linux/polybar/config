@@ -37,6 +37,7 @@ offset-x = 0%
 offset-y = 0%
 radius = 0.0
 fixed-center = false
+wm-restack = bspwm
 
 background = ${colors.background}
 foreground = ${colors.foreground}
