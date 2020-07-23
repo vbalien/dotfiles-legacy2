@@ -20,7 +20,7 @@ const linux: DotOption = {
             fcitx5 fcitx5-qt fcitx5-gtk fcitx5-hangul fcitx5-anthy
             kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git
             telegram-desktop nautilus eog smplayer smplayer-skin transgui-qt
-            qt5-styleplugins xdg-user-dirs slim`,
+            qt5-styleplugins xdg-user-dirs slim network-manager-applet`,
   ],
   link: {
     ...common.link,
@@ -41,6 +41,7 @@ const linux: DotOption = {
     ".pam_environment": "linux/pam_environment",
     ".zshrc": "linux/zshrc",
     ".Xmodmap": "linux/Xmodmap",
+    ".Xresources": "linux/Xresources",
   },
 };
 
@@ -49,11 +50,7 @@ const linuxHiDPI: DotOption = {
   hostname: "MBP",
   link: {
     ...linux.link,
-    ".config/bspwm": "linux-hidpi/bspwm",
     ".config/dconf": "linux-hidpi/dconf",
-    ".config/polybar": "linux-hidpi/polybar",
-    ".config/rofi": "linux-hidpi/rofi",
-    ".config/sxhkd": "linux-hidpi/sxhkd",
     ".config/dunst": "linux-hidpi/dunst",
     ".config/picom": "linux-hidpi/picom",
     ".pam_environment": "linux-hidpi/pam_environment",

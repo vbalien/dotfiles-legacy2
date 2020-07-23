@@ -25,7 +25,7 @@
     lightfg:                     rgba ( 88, 104, 117, 100 % );
     selected-normal-background:  @bordercolor;
     border-color:                @bordercolor;
-    spacing:                     2;
+    spacing:                     1mm;
     separatorcolor:              @bordercolor;
     urgent-background:           rgba ( 0, 0, 0, 0 % );
     selected-urgent-background:  rgba ( 255, 153, 153, 100 % );
@@ -37,33 +37,37 @@
 }
 #window {
     background-color: @background;
-    border:           1;
-    border-radius:    10;
-    padding:          5;
+    border:           0.5mm;
+    border-radius:    5mm;
+    padding:          2.5mm;
 }
 #mainbox {
     border:  0;
     padding: 0;
 }
 #message {
-    border:       1px dash 0px 0px ;
+    border:       1mm dash 0px 0px ;
     border-color: @separatorcolor;
-    padding:      1px ;
+    padding:      1mm ;
 }
 #textbox {
     text-color: @foreground;
 }
 #listview {
     fixed-height: 0;
-    border:       2px solid 0px 0px ;
+    border:       1mm solid 0px 0px ;
     border-color: @separatorcolor;
-    spacing:      2px ;
+    spacing:      1mm ;
     scrollbar:    true;
-    padding:      2px 0px 0px ;
+    padding:      1mm 0px 0px ;
+}
+#element-icon {
+    size:             5mm;
+    padding:          0 5mm;
 }
 #element {
     border:  0;
-    padding: 10px 1px;
+    padding: 3mm 0.5mm;
 }
 #element.normal.normal {
     background-color: @normal-background;
@@ -102,14 +106,14 @@
     text-color:       @alternate-active-foreground;
 }
 #scrollbar {
-    width:        4px ;
+    width:        2mm ;
     border:       0;
-    handle-width: 8px ;
+    handle-width: 4mm ;
     padding:      0;
     handle-color: @bordercolor;
 }
 #sidebar {
-    border:       2px dash 0px 0px ;
+    border:       1mm dash 0px 0px ;
     border-color: @separatorcolor;
 }
 #button.selected {
@@ -119,7 +123,7 @@
 #inputbar {
     spacing:    0;
     text-color: @normal-foreground;
-    padding:    1px ;
+    padding:    2.5mm ;
 }
 #case-indicator {
     spacing:    0;

@@ -31,8 +31,9 @@ alert = #ccbd2c40
 
 [bar/mybar]
 ;monitor = ${env:MONITOR:HDMI-1}
+dpi = ${env:DPI:96}
 width = 100%
-height = 27
+height = ${env:POLYBAR_HEIGHT}
 offset-x = 0%
 offset-y = 0%
 radius = 0.0
@@ -63,6 +64,8 @@ modules-right = mpd pulseaudio eth wlan battery date
 
 tray-position = right
 tray-padding = 2
+tray-scale = 1.0
+tray-maxsize = 32
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -71,7 +74,7 @@ cursor-scroll = ns-resize
 type = custom/text
 content = "  Arch Linux"
 content-foreground = ${colors.secondary}
-click-left=rofi -show combi
+click-left=rofi -show combi -dpi $DPI
 
 [module/xwindow]
 type = internal/xwindow

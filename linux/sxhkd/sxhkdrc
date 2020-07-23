@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show combi 
+	rofi -show combi -dpi $DPI
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -130,7 +130,7 @@ super + {Left,Down,Up,Right}
 super + p
 	bspc node -g sticky; \
 	bspc node --state \~floating; \
-	xdotool getactivewindow windowsize 640 360 windowmove $(expr 1920 - 640 - 45) $(expr 1080 - 360 - 30)
+	xdotool getactivewindow windowsize $(expr 512 \* $SCALE) $(expr 288 \* $SCALE) windowmove $(expr $XSIZE - $(expr 512 + 45) \* $SCALE) $(expr $YSIZE - $(expr 288 + 30) \* $SCALE)
 
 
 XF86AudioMute
@@ -141,3 +141,15 @@ XF86AudioLowerVolume
 
 XF86AudioRaiseVolume
  pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86MonBrightnessUp
+ xbacklight -ctrl gmux_backlight -inc 5
+
+XF86MonBrightnessDown
+ xbacklight -ctrl gmux_backlight -dec 5
+
+XF86KbdBrightnessUp
+ xbacklight -ctrl smc::kbd_backlight -inc 10
+
+XF86KbdBrightnessDown
+ xbacklight -ctrl smc::kbd_backlight -dec 10
