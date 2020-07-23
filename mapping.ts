@@ -20,7 +20,7 @@ const linux: DotOption = {
             fcitx5 fcitx5-qt fcitx5-gtk fcitx5-hangul fcitx5-anthy
             kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git
             telegram-desktop nautilus eog smplayer smplayer-skin transgui-qt
-            qt5-styleplugins xdg-user-dirs slim network-manager-applet`,
+            qt5-styleplugins xdg-user-dirs slim network-manager-applet bc`,
   ],
   link: {
     ...common.link,
@@ -36,6 +36,7 @@ const linux: DotOption = {
     ".config/sxhkd": "linux/sxhkd",
     ".config/fcitx5": "linux/fcitx5",
     ".config/dconf": "linux/dconf",
+    ".config/systemd": "linux/systemd",
     ".config/wallpaper": "wallpaper",
     ".xinitrc": "linux/xinitrc",
     ".pam_environment": "linux/pam_environment",

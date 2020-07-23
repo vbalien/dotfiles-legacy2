@@ -1,0 +1,10 @@
+# This is a transient unit file, created programmatically via the systemd API. Do not edit.
+[Unit]
+Description=Change wallpaper
+
+[Timer]
+OnCalendar=*:0/5
+RemainAfterElapse=no
+
+[Install]
+WantedBy=xsession.target

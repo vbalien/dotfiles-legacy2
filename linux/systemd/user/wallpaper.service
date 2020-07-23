@@ -1,0 +1,7 @@
+# This is a transient unit file, created programmatically via the systemd API. Do not edit.
+[Unit]
+Description=Set wallpaper
+
+[Service]
+Environment="DISPLAY=:0"
+ExecStart="/bin/bash" "-c" "/bin/feh --bg-fill --randomize ~/.config/wallpaper/*"
