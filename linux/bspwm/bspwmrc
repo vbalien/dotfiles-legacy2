@@ -31,7 +31,9 @@ bspc rule -a smplayer                          state=floating     sticky=on
 
 # restart subscribers
 kill_program bspc
-bash $HOME/.config/bspwm/set_subscribers.sh &
+kill_program udevadm
+$HOME/.config/bspwm/layout_monitor.sh &
+$HOME/.config/bspwm/udev_monitor.sh &
 
 # set wallpaper
 systemctl --user start wallpaper.timer
@@ -65,20 +67,3 @@ network-manager-applet &
 dex -a
 libinput-gestures-setup restart
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
-
-# Elan input setting
-xinput set-prop 'Elan Touchpad' 'libinput Tapping Enabled' 1
-xinput set-prop 'Elan Touchpad' 'libinput Natural Scrolling Enabled' 1
-xinput set-prop 'Elan TrackPoint' 'libinput Accel Speed' -0.3
-# Magic Trackpad 2
-xinput set-prop 'Apple Inc. Magic Trackpad 2' 'libinput Natural Scrolling Enabled' 1
-xinput set-prop 'Apple Inc. Magic Trackpad 2' 'libinput Accel Speed' 0.5
-# Macbook Pro Trackpad
-xinput set-prop "bcm5974" "libinput Natural Scrolling Enabled" 1
-xinput set-prop "bcm5974" "libinput Accel Speed" 0.5
-# Logitech G402
-xinput set-prop 'Logitech Gaming Mouse G402' 'libinput Accel Speed' -0.8
-# Logitech G102
-xinput set-prop 'Logitech G102 LIGHTSYNC Gaming Mouse' 'libinput Natural Scrolling Enabled' 1
-xinput set-prop 'Logitech G102 LIGHTSYNC Gaming Mouse' 'libinput Accel Speed' -0.5
-
