@@ -39,6 +39,8 @@ case ${SOLARIZED_THEME:-dark} in
     *)     CURRENT_FG='black';;
 esac
 
+CURRENT_FG='white'
+
 # Special Powerline characters
 
 () {
@@ -89,7 +91,7 @@ prompt_end() {
 # Context: user@hostname (who am I and where am I)
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)%n@%m"
+    prompt_segment none default "%(!.%{%F{yellow}%}.)%n@%m"
   fi
 }
 
@@ -204,7 +206,7 @@ prompt_hg() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment red $CURRENT_FG '%~'
+  prompt_segment cyan $CURRENT_FG '%~'
 }
 
 # Virtualenv: current working virtualenv
@@ -226,7 +228,7 @@ prompt_status() {
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
 
-  [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
+  [[ -n "$symbols" ]] && prompt_segment none default "$symbols"
 }
 
 #AWS Profile:

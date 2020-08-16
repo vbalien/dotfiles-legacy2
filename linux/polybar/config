@@ -18,16 +18,16 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #cc000000
-background-focused = #ccdd5555
-background-label = #cc000000
+background = #008abeb7
+background-focused = #335555
+background-label = #008abeb7
 ;foreground = ${xrdb:color7:#222}
-foreground = #ccc
-foreground-focused = #fff
-foreground-alt = #ccc
+foreground = #FFFFFF
+foreground-focused = #FFFFFF
+foreground-alt = #FFFFFF
 primary = #ffb52a
-secondary = #dd5555
-alert = #ccbd2c40
+secondary = #FFFFFF
+alert = #bd2c40
 
 [bar/mybar]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -65,7 +65,7 @@ modules-right = mpd pulseaudio eth wlan battery date
 tray-position = right
 tray-padding = 2
 tray-scale = 1.0
-tray-maxsize = 32
+tray-maxsize = 16
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -99,7 +99,7 @@ label-urgent-padding = 2
 
 label-empty = %name% :%index%
 label-empty-background = ${colors.background-label}
-label-empty-foreground = #888888
+label-empty-foreground = #9bc7c7
 label-empty-padding = 2
 
 [module/wlan]
@@ -146,7 +146,7 @@ interval = 5
 
 date = " %Y年%m月%d日 %A"
 
-time = %{F#dd5555}%{F-} %H時%M分
+time = %{F#FFFFFF}%{F-} %H時%M分
 
 format-prefix = ""
 format-prefix-foreground = ${colors.secondary}

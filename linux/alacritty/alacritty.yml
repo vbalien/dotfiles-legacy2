@@ -171,10 +171,39 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night Bright)
-#colors:
+colors:
   # Default colors
-  #primary:
-  #  background: '#000000'
+  primary:
+    background: '#FFFFFF'
+
+  bright:
+    black: '#000000'
+    blue: '#4271ae'
+    cyan: '#8abeb7'
+    green: '#718c00'
+    magenta: '#8959a8'
+    red: '#c82829'
+    white: '#ffffff'
+    yellow: '#eab700'
+  cursor:
+    cursor: '#4d4d4c'
+    text: '#ffffff'
+  normal:
+    black: '#000000'
+    blue: '#4271ae'
+    cyan: '#8abeb7'
+    green: '#718c00'
+    magenta: '#8959a8'
+    red: '#c82829'
+    white: '#ffffff'
+    yellow: '#eab700'
+  primary:
+    background: '#ffffff'
+    foreground: '#4d4d4c'
+  selection:
+    background: '#d6d6d6'
+    text: '#4d4d4c'
+
   #  foreground: '#eaeaea'
 
     # Bright and dim foreground colors
@@ -278,7 +307,7 @@ font:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.8
+background_opacity: 0.6
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

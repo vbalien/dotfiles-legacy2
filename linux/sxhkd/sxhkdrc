@@ -130,7 +130,7 @@ super + {Left,Down,Up,Right}
 super + p
 	bspc node -g sticky; \
 	bspc node --state \~floating; \
-	xdotool getactivewindow windowsize $(expr 512 \* $SCALE) $(expr 288 \* $SCALE) windowmove $(expr $XSIZE - $(expr 512 + 45) \* $SCALE) $(expr $YSIZE - $(expr 288 + 30) \* $SCALE)
+	xdotool getactivewindow windowsize $(expr 620 \* $SCALE) $(expr 349 \* $SCALE) windowmove $(expr $XSIZE - $(expr 620 + 45) \* $SCALE) $(expr $YSIZE - $(expr 349 + 30) \* $SCALE)
 
 
 XF86AudioMute
