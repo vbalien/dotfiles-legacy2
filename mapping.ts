@@ -7,16 +7,16 @@ const common: DotOption = {
 };
 
 const linux: DotOption = {
-  hostname: ["office2"],
+  hostname: ["office2", "T490s"],
   install: [
     `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`,
     "yay -Syu",
     `yay -S --needed
-            sxhkd bspwm rofi dunst-git visual-studio-code-bin
+            sxhkd bspwm rofi-git dunst-git visual-studio-code-bin
             picom-ibhagwan-git alacritty zsh maim gtk-engine-murrine
             xclip xdotool google-chrome pulseaudio polybar-git
             gnome-keyring pasystray polkit-gnome nerd-fonts-terminus
-            gnome-settings-daemon nitrogen dex sassc ttf-nanum
+            gnome-settings-daemon feh dex sassc ttf-nanum acpilight
             fcitx5 fcitx5-qt fcitx5-gtk fcitx5-hangul fcitx5-anthy
             kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git
             telegram-desktop nautilus eog smplayer smplayer-skins transgui-qt
@@ -39,6 +39,7 @@ const linux: DotOption = {
     ".config/systemd": "linux/systemd",
     ".config/wallpaper": "wallpaper",
     ".config/nvim": "linux/nvim",
+    ".tmux/themes": "tmux/themes",
     ".xinitrc": "linux/xinitrc",
     ".pam_environment": "linux/pam_environment",
     ".zshrc": "linux/zshrc",

@@ -6,6 +6,7 @@ GTK_THEME     DEFAULT=Lumiere
 GTK2_RC_FILES DEFAULT=/usr/share/themes/Lumiere/gtk-2.0/gtkrc
 
 BROWSER       DEFAULT=google-chrome-stable
+BACKLIGHT     DEFAULT=intel_backlight
 
 QT_STYLE_OVERRIDE    DEFAULT=GTK+
 QT_QPA_PLATFORMTHEME DEFAULT=gtk2
