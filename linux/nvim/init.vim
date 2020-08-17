@@ -13,6 +13,9 @@ Plug 'preservim/nerdtree'
 " NERDTree icon color
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
+" Restore Session
+Plug 'tpope/vim-obsession'
+
 " fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'

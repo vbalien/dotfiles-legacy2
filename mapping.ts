@@ -39,6 +39,7 @@ const linux: DotOption = {
     ".config/systemd": "linux/systemd",
     ".config/wallpaper": "wallpaper",
     ".config/nvim": "linux/nvim",
+    ".tmux.conf": "tmux.conf",
     ".tmux/themes": "tmux/themes",
     ".xinitrc": "linux/xinitrc",
     ".pam_environment": "linux/pam_environment",
