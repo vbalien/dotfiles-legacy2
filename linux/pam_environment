@@ -1,6 +1,6 @@
 GTK_IM_MODULE DEFAULT=fcitx
 QT_IM_MODULE  DEFAULT=fcitx
-XMODIFIERS    DEFAULT=@im=fcitx
+XMODIFIERS    DEFAULT=\@im=fcitx
 
 GTK_THEME     DEFAULT=Lumiere
 GTK2_RC_FILES DEFAULT=/usr/share/themes/Lumiere/gtk-2.0/gtkrc
@@ -10,4 +10,5 @@ BACKLIGHT     DEFAULT=intel_backlight
 
 QT_STYLE_OVERRIDE    DEFAULT=GTK+
 QT_QPA_PLATFORMTHEME DEFAULT=gtk2
-GDK_SCALE            DEFAULT=1
+
+GDK_SCALE                   DEFAULT=1

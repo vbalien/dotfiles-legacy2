@@ -2,14 +2,30 @@ import { dot, DotOption } from "./scripts/dot.ts";
 
 const common: DotOption = {
   link: {
-    ".gitconfig": "gitconfig"
-  }
+    ".gitconfig": "gitconfig",
+    ".config/omz": "omz",
+    ".config/Code/User/settings.json": "Code/User/settings.json",
+    ".config/nvim": "nvim",
+    ".tmux.conf": "tmux.conf",
+    ".tmux/themes": "tmux/themes",
+    ".zshrc": "zshrc",
+  },
+};
+
+const darwin: DotOption = {
+  hostname: "MacBook-Pro.local",
+  link: {
+    ...common.link,
+    ".config/alacritty": "darwin/alacritty",
+    ".local/bin/ufetch": "darwin/bin/ufetch",
+  },
 };
 
 const linux: DotOption = {
   hostname: ["office2", "T490s"],
   install: [
     `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`,
+    `sh -c "git clone https://github.com/addy-dclxvi/gtk-theme-collections ~/.themes"`,
     "yay -Syu",
     `yay -S --needed
             sxhkd bspwm rofi-git dunst-git visual-studio-code-bin
@@ -20,16 +36,14 @@ const linux: DotOption = {
             fcitx5 fcitx5-qt fcitx5-gtk fcitx5-hangul fcitx5-anthy
             kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git
             telegram-desktop nautilus eog smplayer smplayer-skins transgui-qt
-            qt5-styleplugins xdg-user-dirs slim network-manager-applet bc`
+            qt5-styleplugins xdg-user-dirs slim network-manager-applet bc`,
   ],
   link: {
     ...common.link,
     ".config/alacritty": "linux/alacritty",
     ".local/bin/ufetch": "linux/bin/ufetch",
     ".config/bspwm": "linux/bspwm",
-    ".config/Code/User/settings.json": "linux/Code/User/settings.json",
     ".config/dunst": "linux/dunst",
-    ".config/omz": "linux/omz",
     ".config/picom": "linux/picom",
     ".config/polybar": "linux/polybar",
     ".config/rofi": "linux/rofi",
@@ -38,15 +52,11 @@ const linux: DotOption = {
     ".config/dconf": "linux/dconf",
     ".config/systemd": "linux/systemd",
     ".config/wallpaper": "wallpaper",
-    ".config/nvim": "linux/nvim",
-    ".tmux.conf": "tmux.conf",
-    ".tmux/themes": "tmux/themes",
     ".xinitrc": "linux/xinitrc",
     ".pam_environment": "linux/pam_environment",
-    ".zshrc": "linux/zshrc",
     ".Xmodmap": "linux/Xmodmap",
-    ".Xresources": "linux/Xresources"
-  }
+    ".Xresources": "linux/Xresources",
+  },
 };
 
 const linuxHiDPI: DotOption = {
@@ -58,12 +68,12 @@ const linuxHiDPI: DotOption = {
     ".config/dunst": "linux-hidpi/dunst",
     ".config/picom": "linux-hidpi/picom",
     ".pam_environment": "linux-hidpi/pam_environment",
-    ".Xresources": "linux-hidpi/Xresources"
-  }
+    ".Xresources": "linux-hidpi/Xresources",
+  },
 };
 
 try {
-  await dot(Deno.args, [linux, linuxHiDPI]);
+  await dot(Deno.args, [linux, linuxHiDPI, darwin]);
 } catch (err) {
   console.log(err.message);
 }

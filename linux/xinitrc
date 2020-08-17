@@ -5,6 +5,7 @@
 export DPI=$(xrdb -query | grep "dpi" | cut -f 2)
 export SCALE=$GDK_SCALE
 export POLYBAR_HEIGHT=$(echo 27 \* $SCALE | bc)
+export POLYBAR_ICON_HEIGHT=$(echo 16 \* $SCALE | bc)
 export XSIZE=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
 export YSIZE=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
 

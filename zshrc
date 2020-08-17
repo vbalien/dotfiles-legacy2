@@ -6,7 +6,7 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$PATH"
 # Path to your oh-my-zsh installation.
-export ZSH="/home/vbalien/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 export FZF_DEFAULT_COMMAND='fd --type f'
 
