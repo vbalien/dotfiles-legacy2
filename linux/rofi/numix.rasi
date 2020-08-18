@@ -1,25 +1,19 @@
-/**
- * ROFI Color theme
- * User: JT (adpated from lb by Qball)
- * Copyright: Dave Davenport
- */
- 
 * {
-    selected-normal-foreground:  @foreground;
-    foreground:                  #FFFFFF;
+    selected-normal-foreground:  #fff;
+    foreground:                  #4d4d4c;
     normal-foreground:           @foreground;
-    alternate-normal-background: rgba ( 255, 255, 255, 7 % );
+    alternate-normal-background: rgba ( 0, 0, 0, 3 % );
     red:                         rgba ( 220, 50, 47, 100 % );
-    selected-urgent-foreground:  rgba ( 51, 51, 51, 100 % );
+    selected-urgent-foreground:  #fff;
     blue:                        rgba ( 38, 139, 210, 100 % );
     urgent-foreground:           rgba ( 255, 153, 153, 100 % );
-    alternate-urgent-background: rgba ( 255, 255, 255, 7 % );
+    alternate-urgent-background: rgba ( 0, 0, 0, 3 % );
     active-foreground:           @bordercolor;
     lightbg:                     rgba ( 238, 232, 213, 100 % );
-    selected-active-foreground:  @foreground;
-    alternate-active-background: rgba ( 255, 255, 255, 7 % );
-    background:                  rgba ( 21, 21, 21, 80 % );
-    bordercolor:                 rgba ( 235, 86, 77, 100 % );
+    selected-active-foreground:  #fff;
+    alternate-active-background: rgba ( 0, 0, 0, 3 % );
+    background:                  rgba ( 255, 255, 255, 90 % );
+    bordercolor:                 #8abeb7;
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 0, 0, 0, 0 % );
     lightfg:                     rgba ( 88, 104, 117, 100 % );
@@ -37,8 +31,8 @@
 }
 #window {
     background-color: @background;
-    border:           0.5mm;
-    border-radius:    5mm;
+    border:           0.75mm;
+    border-radius:    0;
     padding:          2.5mm;
 }
 #mainbox {
