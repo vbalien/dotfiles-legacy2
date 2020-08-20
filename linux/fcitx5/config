@@ -1,15 +1,14 @@
 [Hotkey]
 # Enumerate when press trigger key repeatedly
 EnumerateWithTriggerKeys=True
+# Temporally switch between first and current Input Method
+AltTriggerKeys=
 
 [Hotkey/TriggerKeys]
 0=Control+space
 1=Zenkaku_Hankaku
 2=Hangul
 3=Alt+Alt_R
-
-[Hotkey/AltTriggerKeys]
-0=Shift_L
 
 [Hotkey/EnumerateForwardKeys]
 0=Control+Shift_L
@@ -42,15 +41,15 @@ EnumerateWithTriggerKeys=True
 0=Tab
 
 [Behavior]
-# Active By Default
+# デフォルトでオンにする
 ActiveByDefault=False
 # Share Input State
 ShareInputState=No
-# Show Input Method Information when switch input method
+# 入力メソッドを切り替える際に入力メソッドの情報を表示する
 ShowInputMethodInformation=True
 # Show Input Method Information when changing focus
 showInputMethodInformationWhenFocusIn=False
-# Default page size
+# 既定のページサイズ
 DefaultPageSize=5
 # Force Enabled Addons
 EnabledAddons=

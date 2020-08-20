@@ -8,8 +8,8 @@ const common: DotOption = {
     ".config/nvim": "nvim",
     ".tmux.conf": "tmux.conf",
     ".tmux/themes": "tmux/themes",
-    ".zshrc": "zshrc",
-  },
+    ".zshrc": "zshrc"
+  }
 };
 
 const darwin: DotOption = {
@@ -17,8 +17,8 @@ const darwin: DotOption = {
   link: {
     ...common.link,
     ".config/alacritty": "darwin/alacritty",
-    ".local/bin/ufetch": "darwin/bin/ufetch",
-  },
+    ".local/bin/ufetch": "darwin/bin/ufetch"
+  }
 };
 
 const linux: DotOption = {
@@ -36,7 +36,8 @@ const linux: DotOption = {
             fcitx5 fcitx5-qt fcitx5-gtk fcitx5-hangul fcitx5-anthy
             kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git
             telegram-desktop nautilus eog smplayer smplayer-skins transgui-qt
-            qt5-styleplugins xdg-user-dirs slim network-manager-applet bc`,
+            qt5-styleplugins xdg-user-dirs slim network-manager-applet bc
+            glava conky`
   ],
   link: {
     ...common.link,
@@ -52,11 +53,16 @@ const linux: DotOption = {
     ".config/dconf": "linux/dconf",
     ".config/systemd": "linux/systemd",
     ".config/wallpaper": "wallpaper",
+    ".config/glava": "linux/glava",
     ".xinitrc": "linux/xinitrc",
+    ".conkyrc": "linux/conkyrc",
+    ".jelly-conky": "linux/jelly-conky",
+    ".themes": "linux/themes",
+    ".bash_profile": "linux/bash_profile",
     ".pam_environment": "linux/pam_environment",
     ".Xmodmap": "linux/Xmodmap",
-    ".Xresources": "linux/Xresources",
-  },
+    ".Xresources": "linux/Xresources"
+  }
 };
 
 const linuxHiDPI: DotOption = {
@@ -68,8 +74,8 @@ const linuxHiDPI: DotOption = {
     ".config/dunst": "linux-hidpi/dunst",
     ".config/picom": "linux-hidpi/picom",
     ".pam_environment": "linux-hidpi/pam_environment",
-    ".Xresources": "linux-hidpi/Xresources",
-  },
+    ".Xresources": "linux-hidpi/Xresources"
+  }
 };
 
 try {

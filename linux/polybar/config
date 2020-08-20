@@ -39,6 +39,7 @@ offset-y = 0%
 radius = 0.0
 fixed-center = false
 wm-restack = bspwm
+locale = ja_JP.UTF-8
 
 background = ${colors.background}
 foreground = ${colors.foreground}

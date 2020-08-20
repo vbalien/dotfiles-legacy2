@@ -106,4 +106,5 @@ source $ZSH/oh-my-zsh.sh
 export GPG_TTY=$(tty)
 
 alias vim=nvim
+alias open=xdg-open
 ufetch
