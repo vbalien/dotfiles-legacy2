@@ -37,7 +37,7 @@ const linux: DotOption = {
             kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git
             telegram-desktop nautilus eog smplayer smplayer-skins transgui-qt
             qt5-styleplugins xdg-user-dirs slim network-manager-applet bc
-            glava conky`
+            glava conky jq xdo ttf-roboto`
   ],
   link: {
     ...common.link,
@@ -74,7 +74,9 @@ const linuxHiDPI: DotOption = {
     ".config/dunst": "linux-hidpi/dunst",
     ".config/picom": "linux-hidpi/picom",
     ".pam_environment": "linux-hidpi/pam_environment",
-    ".Xresources": "linux-hidpi/Xresources"
+    ".Xresources": "linux-hidpi/Xresources",
+    ".config/glava": "linux-hidpi/glava",
+    ".conkyrc": "linux-hidpi/conkyrc"
   }
 };
 
