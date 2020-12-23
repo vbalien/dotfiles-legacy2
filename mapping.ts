@@ -1,13 +1,15 @@
 import { dot, DotOption } from "./scripts/dot.ts";
 
 const common: DotOption = {
+  hostname: "home",
   link: {
     ".gitconfig": "gitconfig",
     ".config/omz": "omz",
     ".config/nvim": "nvim",
     ".tmux.conf": "tmux.conf",
     ".tmux/themes": "tmux/themes",
-    ".zshrc": "zshrc"
+    ".zshrc": "zshrc",
+    ".local/bin/ufetch": "linux/bin/ufetch"
   }
 };
 
@@ -41,7 +43,6 @@ const linux: DotOption = {
   link: {
     ...common.link,
     ".config/alacritty": "linux/alacritty",
-    ".local/bin/ufetch": "linux/bin/ufetch",
     ".config/bspwm": "linux/bspwm",
     ".config/dunst": "linux/dunst",
     ".config/picom": "linux/picom",
@@ -79,7 +80,7 @@ const linuxHiDPI: DotOption = {
 };
 
 try {
-  await dot(Deno.args, [linux, linuxHiDPI, darwin]);
+  await dot(Deno.args, [common, linux, linuxHiDPI, darwin]);
 } catch (err) {
   console.log(err.message);
 }
