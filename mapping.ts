@@ -4,7 +4,6 @@ const common: DotOption = {
   link: {
     ".gitconfig": "gitconfig",
     ".config/omz": "omz",
-    ".config/Code/User/settings.json": "Code/User/settings.json",
     ".config/nvim": "nvim",
     ".tmux.conf": "tmux.conf",
     ".tmux/themes": "tmux/themes",
@@ -22,7 +21,7 @@ const darwin: DotOption = {
 };
 
 const linux: DotOption = {
-  hostname: ["office2", "T490s"],
+  hostname: ["office", "T490s"],
   install: [
     `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`,
     `sh -c "git clone https://github.com/addy-dclxvi/gtk-theme-collections ~/.themes"`,
@@ -37,7 +36,7 @@ const linux: DotOption = {
             kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git
             telegram-desktop nautilus eog smplayer smplayer-skins transgui-qt
             qt5-styleplugins xdg-user-dirs slim network-manager-applet bc
-            glava conky jq xdo ttf-roboto`
+            glava conky jq xdo ttf-roboto xorg-xsetroot xorg-xinput noto-fonts-cjk`
   ],
   link: {
     ...common.link,
@@ -57,7 +56,6 @@ const linux: DotOption = {
     ".xinitrc": "linux/xinitrc",
     ".conkyrc": "linux/conkyrc",
     ".jelly-conky": "linux/jelly-conky",
-    ".themes": "linux/themes",
     ".bash_profile": "linux/bash_profile",
     ".pam_environment": "linux/pam_environment",
     ".Xmodmap": "linux/Xmodmap",

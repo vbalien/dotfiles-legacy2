@@ -1,6 +1,6 @@
 
 /* center radius (pixels) */
-#define C_RADIUS 440
+#define C_RADIUS 340
 /* center line thickness (pixels) */
 #define C_LINE 0
 /* outline color */
@@ -30,7 +30,7 @@
 /* Offset (Y) of the visualization */
 #define CENTER_OFFSET_Y 0
 /* Offset (X) of the visualization */
-#define CENTER_OFFSET_X 0
+#define CENTER_OFFSET_X 400
 
 /* Gravity step, override from `smooth_parameters.glsl` */
 #request setgravitystep 5.0

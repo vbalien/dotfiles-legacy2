@@ -12,8 +12,8 @@
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  #fff;
     alternate-active-background: rgba ( 0, 0, 0, 3 % );
-    background:                  rgba ( 255, 255, 255, 90 % );
-    bordercolor:                 #8abeb7;
+    background:                  rgba ( 255, 255, 255, 70 % );
+    bordercolor:                 #cd9e9e;
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 0, 0, 0, 0 % );
     lightfg:                     rgba ( 88, 104, 117, 100 % );
@@ -31,8 +31,8 @@
 }
 #window {
     background-color: @background;
-    border:           0.75mm;
-    border-radius:    0;
+    border:           1mm;
+    border-radius:    4.7mm;
     padding:          2.5mm;
 }
 #mainbox {

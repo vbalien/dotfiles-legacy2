@@ -19,7 +19,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #008abeb7
-background-focused = #335555
+background-focused = #cd9e9e
 background-label = #008abeb7
 ;foreground = ${xrdb:color7:#222}
 foreground = #FFFFFF
@@ -100,7 +100,7 @@ label-urgent-padding = 2
 
 label-empty = %name% :%index%
 label-empty-background = ${colors.background-label}
-label-empty-foreground = #9bc7c7
+label-empty-foreground = #f3d6d6
 label-empty-padding = 2
 
 [module/wlan]

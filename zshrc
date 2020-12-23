@@ -108,3 +108,5 @@ export GPG_TTY=$(tty)
 alias vim=nvim
 alias open=xdg-open
 ufetch
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
