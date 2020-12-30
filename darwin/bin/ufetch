@@ -16,7 +16,7 @@ shell="$(basename "$SHELL")"
 if [ -x "$(command -v pkgin)" ]; then
 	packages="$(pkgin list | wc -l)"
 elif [ -x "$(command -v brew)" ]; then
-	brew_packages="$(brew list | wc -l)"
+	brew_packages="$(brew list --formula | wc -l)"
 	cask_packages="$(brew cask list 2> /dev/null | wc -l)"
 	packages="$(( ${brew_packages} + ${cask_packages} ))"
 elif [ -x "$(command -v port)" ]; then
@@ -57,10 +57,10 @@ if [ -x "$(command -v tput)" ]; then
 fi
 
 # you can change these
-lc="${reset}${bold}${cyan}"                # labels
-nc="${reset}${bold}${cyan}"                # user and hostname
+lc="${reset}${bold}${magenta}"                # labels
+nc="${reset}${bold}${magenta}"                # user and hostname
 ic="${reset}"                       # info
-c0="${reset}${cyan}"                       # first color
+c0="${reset}${magenta}"                       # first color
 
 ## OUTPUT
 
