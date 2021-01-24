@@ -9,8 +9,9 @@ const common: DotOption = {
     ".tmux.conf": "tmux.conf",
     ".tmux/themes": "tmux/themes",
     ".zshrc": "zshrc",
-    ".local/bin/ufetch": "linux/bin/ufetch"
-  }
+    ".local/bin/ufetch": "linux/bin/ufetch",
+    ".vimrc": "vimrc",
+  },
 };
 
 const darwin: DotOption = {
@@ -18,8 +19,8 @@ const darwin: DotOption = {
   link: {
     ...common.link,
     ".config/alacritty": "darwin/alacritty",
-    ".local/bin/ufetch": "darwin/bin/ufetch"
-  }
+    ".local/bin/ufetch": "darwin/bin/ufetch",
+  },
 };
 
 const linux: DotOption = {
@@ -38,7 +39,7 @@ const linux: DotOption = {
             kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git
             telegram-desktop nautilus eog smplayer smplayer-skins transgui-qt
             qt5-styleplugins xdg-user-dirs slim network-manager-applet bc
-            glava conky jq xdo ttf-roboto xorg-xsetroot xorg-xinput noto-fonts-cjk`
+            glava conky jq xdo ttf-roboto xorg-xsetroot xorg-xinput noto-fonts-cjk`,
   ],
   link: {
     ...common.link,
@@ -60,8 +61,8 @@ const linux: DotOption = {
     ".bash_profile": "linux/bash_profile",
     ".pam_environment": "linux/pam_environment",
     ".Xmodmap": "linux/Xmodmap",
-    ".Xresources": "linux/Xresources"
-  }
+    ".Xresources": "linux/Xresources",
+  },
 };
 
 const linuxHiDPI: DotOption = {
@@ -75,8 +76,8 @@ const linuxHiDPI: DotOption = {
     ".pam_environment": "linux-hidpi/pam_environment",
     ".Xresources": "linux-hidpi/Xresources",
     ".config/glava": "linux-hidpi/glava",
-    ".conkyrc": "linux-hidpi/conkyrc"
-  }
+    ".conkyrc": "linux-hidpi/conkyrc",
+  },
 };
 
 try {

@@ -3,6 +3,7 @@ export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 export DENO_INSTALL="/home/vbalien/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+export PATH="$PATH:$HOME/go/bin"
 
 export PATH="$HOME/.yarn/bin:$PATH"
 # Path to your oh-my-zsh installation.
@@ -103,9 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vi=vim
 export GPG_TTY=$(tty)
 
-alias vim=nvim
 if [[ `uname` != "Darwin" ]]; then
   alias open=xdg-open
 fi

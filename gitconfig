@@ -4,3 +4,5 @@
 	name = Jisu Kim
 [commit]
 	gpgsign = true
+[core]
+	editor = vim
