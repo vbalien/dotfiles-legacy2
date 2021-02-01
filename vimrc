@@ -29,6 +29,7 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'scheakur/vim-scheakur'
 Plug 'junegunn/seoul256.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Language Pack
 Plug 'sheerun/vim-polyglot'
@@ -88,8 +89,7 @@ let g:PaperColor_Theme_Options = {
   \   }
   \ }
 
-set background=light
-colorscheme seoul256-light
+colorscheme dracula
 
 hi Normal guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
