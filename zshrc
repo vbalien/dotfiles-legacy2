@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=vim
+TERM=xterm-256color
 export GPG_TTY=$(tty)
 
 if [[ `uname` != "Darwin" ]]; then

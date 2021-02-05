@@ -49,7 +49,8 @@ const linux: DotOption = {
             kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git
             telegram-desktop nautilus eog smplayer smplayer-skins transgui-qt
             qt5-styleplugins xdg-user-dirs slim network-manager-applet bc
-            glava conky jq xdo ttf-roboto xorg-xsetroot xorg-xinput noto-fonts-cjk`,
+            glava conky jq xdo ttf-roboto xorg-xsetroot xorg-xinput noto-fonts-cjk
+            xorg-xmodmap libinput-gestures`,
   ],
   link: {
     ...common.link,
