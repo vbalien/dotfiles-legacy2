@@ -6,12 +6,15 @@ window:
     columns: 80
     lines: 25
 
-  decorations: full
+  padding:
+    x: 6
+    y: 6
+
+  decorations: none
 font:
   normal:
     family: TerminessTTF Nerd Font
 
   size: 16.0
 colors:
-background_opacity: 1
-
+background_opacity: 0.9

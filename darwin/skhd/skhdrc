@@ -1,0 +1,56 @@
+# spawn terminal
+alt - return : open -na /Applications/Alacritty.app
+cmd - return : open -na /Applications/Alacritty.app
+
+# focus window
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+
+# swap managed window
+shift + alt - h : yabai -m window --swap west
+shift + alt - l : yabai -m window --swap east
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+
+# move managed window
+ctrl + shift + alt - h : yabai -m window --warp west
+ctrl + shift + alt - l : yabai -m window --warp east
+ctrl + shift + alt - j : yabai -m window --warp south
+ctrl + shift + alt - k : yabai -m window --warp north
+
+# fast focus desktop
+alt - x : yabai -m space --focus recent
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+alt - 6 : yabai -m space --focus 6
+alt - 7 : yabai -m space --focus 7
+alt - 8 : yabai -m space --focus 8
+alt - 0x21 : yabai -m space --focus prev
+alt - 0x1E : yabai -m space --focus next
+
+# fullscreen
+alt + shift - f : yabai -m window --toggle zoom-fullscreen
+
+alt - f : yabai -m window --toggle float
+
+# pip
+alt - p : yabai -m window --toggle float;\
+      yabai -m window --toggle sticky;\
+      yabai -m window --toggle topmost;\
+      yabai -m window --resize abs:640:360;\
+      yabai -m window --move abs:1240:800
+
+# send to space
+alt + shift - 1 : yabai -m window --space 1 
+alt + shift - 2 : yabai -m window --space 2
+alt + shift - 3 : yabai -m window --space 3 
+alt + shift - 4 : yabai -m window --space 4 
+alt + shift - 5 : yabai -m window --space 5 
+alt + shift - 6 : yabai -m window --space 6 
+alt + shift - 7 : yabai -m window --space 7 
+alt + shift - 8 : yabai -m window --space 8 

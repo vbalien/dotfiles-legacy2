@@ -16,10 +16,20 @@ const common: DotOption = {
 
 const darwin: DotOption = {
   hostname: "MacBook-Pro.local",
+  install: [
+    `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`,
+    `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`,
+    "brew tap homebrew/cask-fonts",
+    "brew install --cask google-chrome alacritty iina visual-studio-code font-terminess-ttf-nerd-font typora",
+    "brew install wget vim yarn yabai skhd spacebar",
+  ],
   link: {
     ...common.link,
     ".config/alacritty": "darwin/alacritty",
     ".local/bin/ufetch": "darwin/bin/ufetch",
+    ".config/yabai": "darwin/yabai",
+    ".config/skhd": "darwin/skhd",
+    ".config/spacebar": "darwin/spacebar",
   },
 };
 

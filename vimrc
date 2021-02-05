@@ -62,7 +62,8 @@ set hlsearch
 set cursorline
 syntax on
 
-set clipboard+=unnamedplus
+set clipboard=unnamed
+" set clipboard+=unnamedplus
 
 set laststatus=2
 set shell=/bin/bash
