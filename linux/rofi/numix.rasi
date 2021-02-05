@@ -1,6 +1,6 @@
 * {
     selected-normal-foreground:  #fff;
-    foreground:                  #4d4d4c;
+    foreground:                  #f8f8f2;
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 0, 0, 0, 3 % );
     red:                         rgba ( 220, 50, 47, 100 % );
@@ -12,8 +12,8 @@
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  #fff;
     alternate-active-background: rgba ( 0, 0, 0, 3 % );
-    background:                  rgba ( 255, 255, 255, 70 % );
-    bordercolor:                 #cd9e9e;
+    background:                  #282a36aa;
+    bordercolor:                 #8E83B8;
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 0, 0, 0, 0 % );
     lightfg:                     rgba ( 88, 104, 117, 100 % );
@@ -32,7 +32,6 @@
 #window {
     background-color: @background;
     border:           1mm;
-    border-radius:    4.7mm;
     padding:          2.5mm;
 }
 #mainbox {

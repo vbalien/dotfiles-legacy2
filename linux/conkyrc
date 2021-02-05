@@ -16,7 +16,7 @@ draw_borders=false,
 -------------------------------------
 --  Window Specifications
 -------------------------------------
-gap_x=410,
+gap_x=1200,
 gap_y=380,
 
 minimum_height=250,

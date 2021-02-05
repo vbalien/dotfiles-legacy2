@@ -17,8 +17,9 @@ bspc config borderless_monocle    true
 bspc config gapless_monocle       true
 bspc config single_monocle        true
 bspc config focus_follows_pointer true
-bspc config focused_border_color  '#cd9e9e'
-bspc config normal_border_color   '#f3d6d6'
+bspc config focused_border_color  '#8E83B8'
+bspc config normal_border_color   '#51425C'
+bspc config pointer_modifier      mod1
 
 bspc rule -a Nextcloud            desktop='^1' state=floating     follow=on
 bspc rule -a "*:transgui"                      state=floating     follow=on
@@ -38,7 +39,7 @@ $HOME/.config/bspwm/udev_monitor.sh &
 
 # set wallpaper
 systemctl --user start wallpaper.timer
-feh --bg-fill --randomize ${HOME}/.config/wallpaper/*
+feh --bg-fill --randomize ${HOME}/.config/wallpaper/mizore_shirayuki.png
 
 # restart programs
 kill_program conky

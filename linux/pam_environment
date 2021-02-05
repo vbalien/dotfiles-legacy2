@@ -2,8 +2,8 @@ GTK_IM_MODULE DEFAULT=fcitx
 QT_IM_MODULE  DEFAULT=fcitx
 XMODIFIERS    DEFAULT=\@im=fcitx
 
-GTK_THEME     DEFAULT=Lumiere
-GTK2_RC_FILES DEFAULT=/home/vbalien/.themes/Lumiere/gtk-2.0/gtkrc
+GTK_THEME     DEFAULT=Dracula
+GTK2_RC_FILES DEFAULT=/usr/share/themes/Dracula/gtk-2.0/gtkrc
 
 BROWSER       DEFAULT=google-chrome-stable
 BACKLIGHT     DEFAULT=intel_backlight

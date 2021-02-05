@@ -50,7 +50,7 @@ const linux: DotOption = {
             telegram-desktop nautilus eog smplayer smplayer-skins transgui-qt
             qt5-styleplugins xdg-user-dirs slim network-manager-applet bc
             glava conky jq xdo ttf-roboto xorg-xsetroot xorg-xinput noto-fonts-cjk
-            xorg-xmodmap libinput-gestures`,
+            xorg-xmodmap libinput-gestures noto-fonts-emoji`,
   ],
   link: {
     ...common.link,
