@@ -25,10 +25,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " 컬러 테마
-Plug 'tomasiser/vim-code-dark'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'scheakur/vim-scheakur'
-Plug 'junegunn/seoul256.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Language Pack
@@ -44,8 +40,6 @@ Plug 'wakatime/vim-wakatime'
 
 " git status
 Plug 'airblade/vim-gitgutter'
-
-Plug 'vim-scripts/SyntaxComplete'
 
 call plug#end()
 
@@ -80,16 +74,12 @@ nmap <Tab> :NERDTreeToggle<cr>
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
+" extension
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 " theme config
-let g:PaperColor_Theme_Options = {
-  \   'theme': {
-  \     'default': {
-  \       'transparent_background': 1
-  \     }
-  \   }
-  \ }
-
+let g:dracula_colorterm = 0
+let g:dracula_italic = 0
 colorscheme dracula
 
 hi Normal guibg=NONE ctermbg=NONE
