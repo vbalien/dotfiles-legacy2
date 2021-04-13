@@ -3,7 +3,6 @@
 sudo yabai --load-sa
 sleep 5
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-brew services restart spacebar
 open -a /Applications/Telegram.app
 
 yabai -m config layout bsp
@@ -12,7 +11,7 @@ yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          autofocus
 yabai -m config window_placement             second_child
 
-yabai -m config external_bar   main:30:0
+yabai -m config external_bar   main:25:0
 yabai -m config top_padding    20
 yabai -m config bottom_padding 20
 yabai -m config left_padding   20
@@ -32,13 +31,29 @@ yabai -m config normal_window_opacity        0.90
 yabai -m config mouse_modifier alt
 
 yabai -m rule --add app="^IINA$" sticky=on layer=above manage=off border=off
-yabai -m rule --add app="^시스템 환경설정$" layer=above manage=off
-yabai -m rule --add app="^Telegram$" layer=above manage=off sticky=on
-yabai -m rule --add app="^Transmission Remote GUI$" layer=above manage=off
+yabai -m rule --add app="^시스템 환경설정$" layer=above manage=off border=off
+yabai -m rule --add app="^Telegram$" layer=above manage=off sticky=on border=off
+yabai -m rule --add app="^Transmission Remote GUI$" layer=above manage=off border=off
 yabai -m rule --add app="^Finder$" layer=above manage=off border=off
+yabai -m rule --add app="^카카오톡$" layer=above manage=off sticky=on
 
 yabai -m rule --add app=Google\ Chrome space=3
+yabai -m rule --add app=Microsoft\ Edge space=3
 yabai -m rule --add app="^Code$" space=4
+
+yabai -m space 1 --label ""
+yabai -m space 2 --label ""
+yabai -m space 3 --label ""
+yabai -m space 4 --label ""
+yabai -m space 5 --label ""
+
+yabai -m signal --add event=application_activated \
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"vbalien-title-jsx\"'"
+yabai -m signal --add event=window_title_changed \
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"vbalien-title-jsx\"'"
+yabai -m signal --add event=space_changed \
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"vbalien-workspace-jsx\"'"
+osascript -e 'tell application "Übersicht" to refresh widget id "vbalien-workspace-jsx"'
 
 echo "yabai configuration loaded.."
 
