@@ -37,7 +37,6 @@ const linux: DotOption = {
   hostname: ["office", "T490s"],
   install: [
     `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`,
-    `sh -c "git clone https://github.com/addy-dclxvi/gtk-theme-collections ~/.themes"`,
     "yay -Syu",
     `yay -S --needed
             sxhkd bspwm rofi-git dunst-git visual-studio-code-bin
@@ -46,7 +45,7 @@ const linux: DotOption = {
             gnome-keyring pasystray polkit-gnome nerd-fonts-terminus
             gnome-settings-daemon feh dex sassc ttf-nanum acpilight
             fcitx5 fcitx5-qt fcitx5-gtk fcitx5-hangul fcitx5-anthy
-            kcm-fcitx5 numix-gtk-theme-git numix-circle-icon-theme-git
+            kcm-fcitx5 dracula-gtk-theme
             telegram-desktop nautilus eog smplayer smplayer-skins transgui-qt
             qt5-styleplugins xdg-user-dirs slim network-manager-applet bc
             glava conky jq xdo ttf-roboto xorg-xsetroot xorg-xinput noto-fonts-cjk
@@ -66,6 +65,7 @@ const linux: DotOption = {
     ".config/systemd": "linux/systemd",
     ".config/wallpaper": "wallpaper",
     ".config/glava": "linux/glava",
+    ".icons": "linux/icons",
     ".xinitrc": "linux/xinitrc",
     ".conkyrc": "linux/conkyrc",
     ".jelly-conky": "linux/jelly-conky",
