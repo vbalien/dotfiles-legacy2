@@ -14,6 +14,14 @@ const common: DotOption = {
   },
 };
 
+const synology: DotOption = {
+  hostname: "nas",
+  link: {
+    ...common.link,
+    ".local/bin/ufetch": "synology/bin/ufetch",
+  },
+};
+
 const darwin: DotOption = {
   hostname: "MacBook-Pro.local",
   install: [
@@ -92,7 +100,7 @@ const linuxHiDPI: DotOption = {
 };
 
 try {
-  await dot(Deno.args, [common, linux, linuxHiDPI, darwin]);
+  await dot(Deno.args, [common, linux, linuxHiDPI, darwin, synology]);
 } catch (err) {
   console.log(err.message);
 }

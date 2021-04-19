@@ -111,6 +111,11 @@ export GPG_TTY=$(tty)
 if [[ `uname` != "Darwin" ]]; then
   alias open=xdg-open
 fi
-ufetch
+
+if [[ -f "/etc/synoinfo.conf" ]]; then
+  export PATH="$PATH:/opt/bin"
+else
+  ufetch
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
