@@ -114,8 +114,8 @@ fi
 
 if [[ -f "/etc/synoinfo.conf" ]]; then
   export PATH="$PATH:/opt/bin"
-else
-  ufetch
 fi
+
+ufetch
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
