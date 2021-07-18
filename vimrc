@@ -7,6 +7,7 @@ Plug 'prettier/vim-prettier', {
 
 " 아이콘 폰트 사용
 Plug 'ryanoasis/vim-devicons'
+
 " NERDTree
 " NERDTree git
 Plug 'preservim/nerdtree'
@@ -25,7 +26,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " 컬러 테마
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'chriskempson/base16-vim'
+
+" automatic closing of quotes, parenthesis, brackets, etc.
+Plug 'Raimondi/delimitMate'
 
 " Language Pack
 Plug 'sheerun/vim-polyglot'
@@ -70,6 +74,7 @@ set encoding=UTF-8
 " 단축키 설정
 nmap <C-p> :FZF<cr>
 nmap <Tab> :NERDTreeToggle<cr>
+nmap <Leader>f <Plug>(coc-fix-current)
 
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
@@ -78,9 +83,7 @@ inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 " theme config
-let g:dracula_colorterm = 0
-let g:dracula_italic = 0
-colorscheme dracula
+colorscheme base16-tomorrow
 
 hi Normal guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE

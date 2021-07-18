@@ -39,8 +39,6 @@ case ${SOLARIZED_THEME:-dark} in
     *)     CURRENT_FG='black';;
 esac
 
-CURRENT_FG='8'
-
 # Special Powerline characters
 
 () {
