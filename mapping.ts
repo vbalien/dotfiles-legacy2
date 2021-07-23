@@ -1,6 +1,6 @@
 import { dot, DotOption } from "./scripts/dot.ts";
 
-const common: DotOption = {
+const posix: DotOption = {
   hostname: "home",
   link: {
     ".gitconfig": "gitconfig",
@@ -17,7 +17,7 @@ const common: DotOption = {
 const synology: DotOption = {
   hostname: "nas",
   link: {
-    ...common.link,
+    ...posix.link,
     ".local/bin/ufetch": "synology/bin/ufetch",
   },
 };
@@ -32,7 +32,7 @@ const darwin: DotOption = {
     "brew install wget vim yarn yabai skhd spacebar",
   ],
   link: {
-    ...common.link,
+    ...posix.link,
     ".config/alacritty": "darwin/alacritty",
     ".local/bin/ufetch": "darwin/bin/ufetch",
     ".config/yabai": "darwin/yabai",
@@ -60,7 +60,7 @@ const linux: DotOption = {
             xorg-xmodmap libinput-gestures noto-fonts-emoji`,
   ],
   link: {
-    ...common.link,
+    ...posix.link,
     ".config/alacritty": "linux/alacritty",
     ".config/bspwm": "linux/bspwm",
     ".config/dunst": "linux/dunst",
@@ -99,8 +99,16 @@ const linuxHiDPI: DotOption = {
   },
 };
 
+const windows = {
+  hostname: "DeskMini",
+  link: {
+    ".gitconfig": "gitconfig",
+    ".config/nvim": "nvim",
+    "AppData/Local/nvim": "nvim",
+  }
+};
 try {
-  await dot(Deno.args, [common, linux, linuxHiDPI, darwin, synology]);
+  await dot(Deno.args, [posix, linux, linuxHiDPI, darwin, synology, windows]);
 } catch (err) {
   console.log(err.message);
 }
