@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim=nvim
 alias vi=vim
 TERM=xterm-256color
 export GPG_TTY=$(tty)

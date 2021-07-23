@@ -1,10 +1,10 @@
 import:
-  - ~/.config/alacritty/base16-tomorrow.yml
+  - ~/.config/alacritty/dracula.yml
 
 window:
   dimensions:
     columns: 80
-    lines: 25
+    lines: 24
 
   padding:
     x: 6
@@ -15,5 +15,12 @@ font:
     family: TerminessTTF Nerd Font
 
   size: 16.0
-colors:
-background_opacity: 1
+
+background_opacity: 0.96
+
+key_bindings:
+  - { key: Period, mods: Command, chars: "\\f" }
+  - { key: P, mods: Command, chars: "\\p" }
+
+env:
+  TERM: screen-256color
